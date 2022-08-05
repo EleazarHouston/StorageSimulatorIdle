@@ -8,24 +8,37 @@
     <title>Storage Simulator Idle</title>
 </head>
 <body>
-        <h1 style="display: inline-block; margin: 0">Storage Simulator Idle</h1>
-        <p style="float: right">v0.0.1a</p>
+
+    <h1 style="display: inline-block; margin: 0">Storage Simulator Idle</h1>
+    <p style="float: right">v0.0.1a</p>
     
     <div class="row">
-        <div class="column">
-            <h2>Test1</h2>
-            <p id="currentCredits">Credits: 100 ¤</p>
+        <div class="column left">
+            <h2>Storage</h2>
+
             <p id="currentStorage">Free Storage: 0 GB</p>
             <p id="totalStorage">Total Storage: 0 GB</p>
-            <button onclick="buyStorage()">Buy 64GB HDD</button>
-            <script src="main.js" charset="utf-8" type="text/javascript"></script>
-            <button onclick="allocateSDMovie()" id="allocateSDMovie">Allocate SD Movie (2GB)</button>
+            <button value = "red" id = "buyStorageButton" onclick="buyStorage()">Buy 64GB HDD (500 ¤)</button>
+
         </div>
-        <div class="column">
-            <h2>Test2</h2>
-            <p id="currentSDMovies">0 SD Movies</p> 
+
+        <div class="column middle">
+            <h2>Credits</h2>
+            <p id="currentCredits">Credits: 100 ¤</p>
+            <p id="CPS">Credits/Second: 0</p>
+        </div>
+
+        <div class="column right">
+            <h2>Allocation</h2>
+            <div class="clear:both">
+                <p style="display: inline-block" id="currentSDMovies">0 SD Movies</p>
+                <button style="display: inline-block" onclick="allocateSDMovie()" id="allocateSDMovie">Allocate 1 (2GB)</button>
+            </div>
         </div>
     </div>
+
+
+    <script src="main.js" charset="utf-8" type="text/javascript"></script>
 </body>
 </html>
 

@@ -5,7 +5,18 @@ body {
 
 .column {
     float: left;
-    width: 50%;
+}
+
+.left{
+    width: 30%;
+}
+
+.middle{
+    width: 30%;
+}
+
+.right{
+    width: 30%;
 }
 
 .row:after {
