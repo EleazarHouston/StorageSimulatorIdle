@@ -1,0 +1,21 @@
+
+body {
+    background-color:rgb(147, 205, 235);
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}
