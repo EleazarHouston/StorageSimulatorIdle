@@ -10,7 +10,7 @@
 <body>
 
     <h1 style="display: inline-block; margin: 0">Storage Simulator Idle</h1>
-    <p style="float: right">v0.0.2a</p>
+    <p style="float: right">v0.0.2b</p>
     
     <div class="row">
         <div class="column left">
@@ -31,8 +31,10 @@
         <div class="column right">
             <h2>Allocation</h2>
             <div class="clear:both">
-                <p style="display: inline-block" id="currentSDMovies">0 SD Movies</p>
-                <button style="display: inline-block" onclick="allocateSDMovie()" id="allocateSDMovie">Allocate 1 (2GB)</button>
+                <p id="currentSDMovies">SD Movies (2GB): 0</p>
+                <button style="display: inline-block" onclick="allocate1SDMovie()" id="allocate1SDMovie">Allocate 1</button>
+                <button style="display: inline-block" onclick="allocate10SDMovies()" id="allocate10SDMovies">Allocate 10</button>
+
             </div>
         </div>
     </div>
