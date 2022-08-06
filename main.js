@@ -47,16 +47,29 @@ function upgradeHDD() {
     }
 }
 
-function allocateSDMovie() {
+function allocate1SDMovie() {
     if (gameData.freeStorage >= 2) {
         gameData.freeStorage -= 2
         gameData.allocatedSDMovies += 1
         document.getElementById("currentStorage").innerHTML = "Free Storage: " + gameData.freeStorage + " GB"
-        document.getElementById("currentSDMovies").innerHTML = gameData.allocatedSDMovies + " SD Movies"
+        document.getElementById("currentSDMovies").innerHTML = "SD Movies (2GB): " + gameData.allocatedSDMovies
     }
     else if (gameData.freeStorage <= 2) {
-        document.getElementById("allocateSDMovie").style.background="red"
-        setTimeout(() => {(document.getElementById("allocateSDMovie")).style.background=""},250);
+        document.getElementById("allocate1SDMovie").style.background="red"
+        setTimeout(() => {(document.getElementById("allocate1SDMovie")).style.background=""},250);
+    }
+}
+
+function allocate10SDMovies() {
+    if (gameData.freeStorage >= 20) {
+        gameData.freeStorage -= 20
+        gameData.allocatedSDMovies += 10
+        document.getElementById("currentStorage").innerHTML = "Free Storage: " + gameData.freeStorage + " GB"
+        document.getElementById("currentSDMovies").innerHTML = "SD Movies (2GB): " + gameData.allocatedSDMovies
+    }
+    else if (gameData.freeStorage <= 20) {
+        document.getElementById("allocate10SDMovies").style.background="red"
+        setTimeout(() => {(document.getElementById("allocate10SDMovies")).style.background=""},250);
     }
 }
 
